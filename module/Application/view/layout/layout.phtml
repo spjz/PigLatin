@@ -1,0 +1,95 @@
+<?= $this->doctype() ?>
+
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?= $this->headMeta()
+	          ->appendName('author', 'spjz.uk')
+		        ->appendName('description', 'ZF2/Foundation Skeleton Application')
+		        ->appendName('keywords', 'zend, zf2, zurb, foundation, skeleton, application')
+		        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Stylesheets -->
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+	          ->prependStylesheet($this->basePath('bower_components/font-awesome/css/font-awesome.min.css'))
+		        ->prependStylesheet($this->basePath('bower_components/foundation-sites/dist/css/foundation.min.css'))
+            //->prependStylesheet($this->basePath('bower_components/foundation-sites/dist/css/foundation-flex.min.css'))
+            //->prependStylesheet($this->basePath('bower_components/foundation-sites/dist/css/foundation-rtl.min.css'))
+	          ->prependStylesheet($this->basePath('css/app.css'))
+        ?>
+
+        <!-- Scripts -->
+        <?= $this->headScript()
+            ->prependFile($this->basePath('bower_components/foundation-sites/dist/js/foundation.min.js'))
+	          ->prependFile($this->basePath('bower_components/jquery/dist/jquery.min.js'))
+	          ->prependFile($this->basePath('js/app.js'))
+        ?>
+    </head>
+
+    <body>
+
+	    <div class="top-bar">
+
+		    <div class="top-bar-left">
+			    <ul class="menu">
+				    <li><a href="/"><h1>Skeleton</h1></a></li>
+			    </ul>
+		    </div>
+
+		    <div class="top-bar-right">
+			    <div class="row">
+				    <ul class="menu">
+					    <li><a href="mailto:io@spjz.uk"><i class="fa fa-envelope"></i></a></li>
+					    <li><a href="https://github.com/spjz" target="_blank"><i class="fa fa-github"></i></a></li>
+				    </ul>
+			    </div>
+		    </div>
+	    </div>
+
+	    <div class="row">
+
+		    <!--
+		    <div class="small-2 columns">
+			    <div class="sidebar callout primary" id="sidebar">
+				    <div class="row column">
+					    <ul class="vertical menu" data-accordion-menu>
+						    <li class="hollow button translate"><a href="<?= $this->url('home') ?>"><h4><i class="fa fa-flag"></i> Translate</h4></a></li>
+					    </ul>
+				    </div>
+			    </div>
+		    </div>
+		    -->
+
+		    <div class="column">
+			    <div class="content callout primary" id="content">
+				    <?= $this->content ?>
+			    </div>
+		    </div>
+
+	    </div>
+
+	    <footer>
+		    <div class="expanded row">
+			    <div class="medium-6 columns">
+				    <ul class="menu">
+					    <li><a href="#">What is</a></li>
+					    <li><a href="#">this I</a></li>
+					    <li><a href="#">don't even</a></li>
+				    </ul>
+			    </div>
+			    <div class="medium-6 columns">
+				    <ul class="menu align-right">
+					    <li class="menu-text"><sub><a href="mailto:io@spjz.uk">sPJz</a></sub>( ͡° ͜ʖ ͡°)<sub><?= date('Y'); ?></sub></li>
+				    </ul>
+			    </div>
+		    </div>
+	    </footer>
+
+      <?= $this->inlineScript() ?>
+    </body>
+</html>
