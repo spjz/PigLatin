@@ -1,4 +1,6 @@
-Please note you will have to run `composer install` in the root directory,`npm install` and `bower install` in the public directory, followed by `foundation build`. You can view this example live at (https://piglatin.spjz.uk)
+Delete `data/cache/*` if you get an error. This repo contains all the libraries, but you can follow manual build instructions if you prefer.
+
+If so, you will have to delete `vendor` and run `composer install` in the root directory, then delete `bower_components` and `node_modules`, followed by `npm install` and `bower install` in the public directory. You can view this example live at (https://piglatin.spjz.uk)
 
 Use `skeleton.nginx` to host on your own NGINX server.
 
