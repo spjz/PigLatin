@@ -1,4 +1,4 @@
-Please note you will have to run `composer install` in the root directory,`npm install` and `bower install` in the public directory. You can view this example at (https://piglatin.spjz.uk)
+Please note you will have to run `composer install` in the root directory,`npm install` and `bower install` in the public directory, followed by `foundation build`. You can view this example live at (https://piglatin.spjz.uk)
 
 Use `skeleton.nginx` to host on your own NGINX server.
 
