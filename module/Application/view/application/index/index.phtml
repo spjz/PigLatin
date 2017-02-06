@@ -1,7 +1,24 @@
 <div class="row column expanded">
-	<h1>Welcome to <span class="zf-green">Zend Framework</span></h1>
+	<h1>Translate to Pig Latin!</h1>
 </div>
 
 <div class="row column expanded">
-	<p>Congratulations! You have successfully installed the <a href="https://github.com/zendframework/ZendSkeletonApplication" target="_blank">ZF Skeleton Application</a>. You are currently running Zend Framework version <?= \Application\Module::VERSION ?>. This skeleton can serve as a simple starting point for you to begin building your application on ZF.</p>
+	<p>In words that begin with consonant sounds, the initial consonant or consonant cluster is moved to the end of the word, and "ay" is added.</p>
+</div>
+
+<?php
+	if (count($this->output)) {
+		echo '<div class="row column expanded">';
+		echo '<p class="callout secondary">';
+		foreach($this->output as $word) { echo $word . " "; }
+		echo '</p>';
+		echo '</div>';
+	}
+?>
+
+<div class="row column expanded">
+  <form action="/" method="POST">
+    <textarea name="input" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."><?= $this->input ?></textarea>
+	  <button class="button primary" id="submit"><i class="fa fa-arrow-right"></i> Translate</button>
+  </form>
 </div>
